@@ -2,6 +2,7 @@
 import './App.css';
 import axios from 'axios';
 import SearchBar from './components/SearchBar';
+import AchievementCard from './components/achievementCard';
 import { useState } from 'react';
 
 axios.defaults.baseURL = 'http://localhost:8000/';
@@ -58,7 +59,9 @@ const App = () => {
       ) : null}
 
       <div>
-        {achivements.map(achivement => (<div key={achivement}>{achivement}</div>))}
+        {
+          achivements.map(achivement => (<AchievementCard key={achivement.name} achievement={achivement}></AchievementCard>))
+        }
       </div>
     </div>
   );
