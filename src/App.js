@@ -27,7 +27,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Steam achivement token lookup</h1>
+      <h1>Steam achivements lookup</h1>
       <SearchBar onSearchSubmit={onSearchSubmit}></SearchBar>
       {wasSearchError ? (
         <div class="ui secondary inverted red segment">
