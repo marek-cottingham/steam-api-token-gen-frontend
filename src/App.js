@@ -16,9 +16,17 @@ const App = () => {
     
       setSearchPending(true);
       setWasSearchError(false);
+
+      let params = {}
+
+      if (searchText.match(/^[0-9]{5,}$/) === null){
+        params.userName = searchText;
+      }else{
+        params.userId = searchText;
+      }
       
       const response = await axios.get('/getAchievementList', {
-          params: {userName: searchText}
+          params: params
       }).catch(error => {
           console.log(error);
           setWasSearchError(true);

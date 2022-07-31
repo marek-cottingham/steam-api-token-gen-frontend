@@ -19,7 +19,7 @@ class SearchBar extends React.Component{
                     <div className="ui icon input" style={{width: "100%"}}>
                         <input 
                             type="text" 
-                            placeholder="Enter user name..."
+                            placeholder="Enter user id or user name (from profile URL)..."
                             value={this.state.searchText}
                             onChange={(e) => this.setState({searchText: e.target.value})}
                         />
